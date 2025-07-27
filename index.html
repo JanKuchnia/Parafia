@@ -297,7 +297,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
+      <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -338,4 +338,17 @@
                 document.querySelectorAll('.mass-time')[0].classList.add('ring-2', 'ring-blue-500');
             }
             
-            // Add 
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
